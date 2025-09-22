@@ -1,0 +1,142 @@
+/* === Contact Page Styles === */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background-color: #121212;
+  color: #fff;
+}
+
+/* Hero container */
+.contact-hero {
+  max-width: 1200px;
+  margin: 60px auto;
+  background: #1e1e1e;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+/* Left side (form) */
+.contact-left {
+  flex: 2;
+  min-width: 320px;
+}
+
+/* Remove old left-side title */
+.contact-left h3 {
+  display: none;
+}
+
+/* Input fields */
+.contact-form input,
+.contact-form textarea {
+  font-family: inherit;
+  font-size: 16px;
+  color: #fff;
+  background: #1c1c1c;
+  border: 1px solid #333;
+  padding: 12px;
+  border-radius: 6px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+  transition: border 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border: 1px solid #4da6ff;
+  outline: none;
+}
+
+.contact-form textarea {
+  min-height: 250px;
+  resize: vertical;
+}
+
+/* Send button */
+.contact-form button {
+  width: 100%;
+  padding: 14px;
+  background: #4da6ff;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: inherit; /* ensures font matches site */
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #82cfff;
+}
+
+.contact-photo {
+    margin-left: 35px;
+}
+/* Right side (photo + heading + social) */
+.contact-right {
+  flex: 1;
+  text-align: center;
+}
+
+/* Contact Me heading */
+.contact-right h2 {
+  font-size: 32px;
+  font-weight: 600;
+  color: #4da6ff;
+  margin-bottom: 20px;
+}
+
+/* Profile photo */
+.contact-right img {
+  max-width: 280px;
+  border-radius: 50%;
+  border: 3px solid #333;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+}
+
+/* Social links under the photo */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 10px;
+}
+
+.social-links img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.2s ease;
+}
+
+.social-links img:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .contact-hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-left {
+    order: 2;
+  }
+
+  .contact-right {
+    order: 1;
+  }
+
+  .contact-right img {
+    max-width: 220px;
+  }
+}
