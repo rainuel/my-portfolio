@@ -1,20 +1,20 @@
 /* ===== Hero Section ===== */
 .hero {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap; /* allows wrapping on smaller screens */
+  justify-content: center; /* centers content horizontally */
   align-items: center;
   gap: 5rem;
   padding: 6rem 8%;
   margin: 2rem 5%;
   background: var(--bg-light);
   border-radius: 15px;
-  flex-wrap: wrap; /* allows wrapping on smaller screens */
 }
 
 /* Left text */
 .hero-text {
-  flex: 1;
-  min-width: 250px; /* prevents shrinking too much */
+  flex: 1 1 400px; /* grow/shrink, min-width */
+  max-width: 550px;
 }
 
 .hero-text .intro {
@@ -59,11 +59,10 @@
 
 /* ===== Hero Image ===== */
 .hero-image {
-  flex: 1;
+  flex: 0 0 auto; /* don’t grow/shrink */
   text-align: center; /* ensures the image is always centered */
   position: relative;
   min-width: 200px;
-  margin: 0 auto; /* centers the container */
 }
 
 .hero-image img {
