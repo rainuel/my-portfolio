@@ -8,12 +8,13 @@
   margin: 2rem 5%;
   background: var(--bg-light);
   border-radius: 15px;
+  flex-wrap: wrap; /* allows wrapping on smaller screens */
 }
 
 /* Left text */
 .hero-text {
   flex: 1;
-  margin-left: 100px;
+  min-width: 250px; /* prevents shrinking too much */
 }
 
 .hero-text .intro {
@@ -40,6 +41,7 @@
   margin-bottom: 2.5rem;
 }
 
+/* Buttons */
 .btn {
   display: inline-block;
   padding: 1.2rem 2.4rem;
@@ -58,12 +60,10 @@
 /* ===== Hero Image ===== */
 .hero-image {
   flex: 1;
-  text-align: center;
+  text-align: center; /* ensures the image is always centered */
   position: relative;
-}
-
-#profilePicture {
-  margin-left: 130px;
+  min-width: 200px;
+  margin: 0 auto; /* centers the container */
 }
 
 .hero-image img {
@@ -80,13 +80,12 @@
   transform: scale(1.08);
 }
 
-/* Social icons */
+/* ===== Social Icons ===== */
 .social-links {
   display: flex;
   justify-content: center;
   gap: 26px;
   margin-top: 24px;
-  margin-left: 40px;
 }
 
 .social-links img {
@@ -103,6 +102,8 @@
 }
 
 /* ===== Responsive ===== */
+
+/* Medium screens: tablets */
 @media (max-width: 1024px) {
   .hero {
     flex-direction: column;
@@ -114,5 +115,49 @@
   .hero-image img {
     width: 280px;
     height: 280px;
+  }
+}
+
+/* Small screens: mobile */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 5%;
+    gap: 2rem;
+    margin: 1rem;
+  }
+
+  .hero-text h1 {
+    font-size: 3rem;
+  }
+
+  .hero-text .intro {
+    font-size: 1.2rem;
+  }
+
+  .hero-text .tagline {
+    max-width: 100%;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-image img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .social-links {
+    gap: 16px;
+  }
+
+  .social-links img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .btn {
+    padding: 1rem 2rem;
+    font-size: 0.9rem;
   }
 }
